@@ -1,0 +1,356 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #2C3545;
+    width: 100%;
+    height: 100%;
+}
+
+.display-flex {
+    display: flex !important;
+    height: 100% !important;
+}
+
+.profile {
+    display: block;
+    width: 425px;
+    background-color: #ffffff;
+}
+
+.profile .card{
+    padding-top: 80px;
+    padding-left: 70px;
+    padding-right: 50px;
+}
+
+.profile .image {
+    position: relative;
+    width: 250px;
+    height: 290px;
+    overflow:hidden;
+    background: url('image.jpg') no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.profile .image .surface {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 0px;
+    opacity: 0;
+    background: #000000;
+    transition: .2s linear;
+}
+
+.profile .image .links {
+    text-decoration: none;
+}
+
+.profile .image .fab {
+    cursor: pointer;
+    left: 0;
+    bottom:0;
+    font-size: 22px;
+    padding: 8px;
+    background: #ffffff;
+    margin: 20px 20px;
+    opacity: 0;
+    transform: translateX(6px) translateY(170px);
+}
+
+.profile .image .name {
+    color: #f1f1f1;
+    font-size: 22px;
+    opacity: 0;
+    text-align: center;
+    transform: translateY(175px);
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', 'Fira Sans', Ubuntu, Oxygen, 'Oxygen Sans', Cantarell, 'Droid Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Lucida Grande', Helvetica, Arial, sans-serif;
+}
+
+.profile .image .about {
+    color: #f3f3f3;
+    font-size: 18px;
+    opacity: 0;
+    text-align: center;
+    transform: translateY(180px);
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', 'Fira Sans', Ubuntu, Oxygen, 'Oxygen Sans', Cantarell, 'Droid Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Lucida Grande', Helvetica, Arial, sans-serif;
+}
+
+.profile .image:hover .name {
+    opacity: 1;
+    transition: .6s;
+}
+
+.profile .image:hover .about {
+    opacity: 1;
+    transition: .6s;
+}
+
+.profile .image:hover .surface {
+    opacity: .8;
+    height: 40%;
+}
+
+.profile .image:hover .fab {
+    opacity: 1;
+}
+
+.profile .image:hover .fa-github {
+    color: #000000;
+    transition: .2s;
+}
+
+.profile .image:hover .fa-linkedin {
+    color: #2867B2;
+    transition: .4s;
+}
+
+.profile .image:hover .fa-hackerrank {
+    color: #2bbc62;
+    transition: .6s;
+}
+
+.profile .aboutme {
+    padding-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 400px;
+}
+
+.profile .aboutme .intro {
+    text-align: justify;
+    font-size: 14px;
+    text-indent: 50px;
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', 'Fira Sans', Ubuntu, Oxygen, 'Oxygen Sans', Cantarell, 'Droid Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Lucida Grande', Helvetica, Arial, sans-serif;
+    line-height: 20px;
+}
+
+.main {
+    margin-top: 30px;
+    margin-left: 20px;;
+    width: 100%;
+    text-align: center;
+}
+
+.main .navlinks {
+    float: left;
+    padding: 20px 30px;
+    font-size: 16px;
+    color: #f3f3f3;
+    letter-spacing: 1px;    
+    line-height: 1px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.main .navlinks:hover {
+    float: left;
+    padding: 20px 30px;
+    font-size: 16px;
+    color: #f3f3f3;
+    letter-spacing: 1px;    
+    line-height: 1px;
+    text-transform: uppercase;
+    text-align: center;
+    border-bottom: 3px solid #cf7500;
+    cursor: pointer;
+}
+
+.navactive {
+    
+    border-bottom: 3px solid #cf7500;
+}
+
+.navcontent {
+    margin-top: 50px;
+    padding-top: 40px;
+    display: none;
+}
+
+.nav-active-content {
+    display: block;
+}
+
+.dates {
+    font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    text-transform: uppercase;
+    font-size: 16px;
+    text-align: left;
+    color: #f3f3f3;
+    line-height: 2px;
+    letter-spacing: 1px;
+}
+
+.organisation {
+    font-family: Rockwell;
+    text-align: left;
+    letter-spacing: 1px;
+    line-height: 2px;
+    padding-top: 30px;
+    padding-bottom: 25px;
+    color: #ffffff;
+}
+
+.points {
+    line-height: 125%;
+    text-align: left;
+    padding-bottom: 50px;
+    color: #f3f3f3;
+    letter-spacing: 1px;
+    font-family: Calibri;
+    padding-left: 15px;
+    list-style-type: square;
+}
+
+.span {
+    font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    text-transform: uppercase;
+    font-size: 16px;
+    text-align: left;
+    color: #f3f3f3;
+    line-height: 2px;
+    letter-spacing: 1px;
+}
+
+.institution {
+    font-family: Rockwell;
+    text-align: left;
+    letter-spacing: 2px;
+    line-height: 100%;
+    padding-top: 10px;
+    padding-bottom: 40px;
+    color: #ffffff;
+}
+
+.links {
+    text-decoration: none !important;
+    color: #f3f3f3;
+    text-decoration: underline !important;
+}
+
+.title {
+    font-family: Rockwell;
+    text-align: left;
+    letter-spacing: 2px;
+    line-height: 100%;
+    padding-bottom: 20px;
+    color: #ffffff;
+}
+
+.desc {
+    color: #f3f3f3;
+    font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    padding-bottom: 30px;
+    text-align: left;
+    letter-spacing: 1px;
+    padding-left: 15px;
+    list-style-type: square;
+}
+
+.fas {
+    font-size: 23px;
+    padding: 20px;
+    background: #5a6c8c;
+    color: #ffffff;
+}
+
+.temp-ul {
+    list-style-type: none;
+    padding-top: 13px;
+    color: #f3f3f3;
+    font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    line-height: 125%;
+    letter-spacing: 1px;
+    padding-bottom: 10px;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.map {
+    text-decoration: none;
+    color: #f3f3f3;
+}
+
+.mail {
+    text-decoration: none;
+    color: #f3f3f3;
+    line-height: 110%;
+    padding-top: 13px;;
+    padding-bottom: 10px;
+    list-style-type: none;
+    letter-spacing: 1px;
+    font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+}
+
+.phn {
+    text-decoration: none;
+    font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    color: #f3f3f3;
+    line-height: 125%;
+    padding-top: 13px;
+    list-style-type: none;
+    letter-spacing: 1px;
+}
+
+.d-flex {
+    display: flex !important;
+    flex-wrap: wrap !important;
+}
+
+.skill {
+    margin-bottom: 16px !important;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.skill-link {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    height: 100% !important;
+    position: relative !important;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    border-radius: 3px !important;
+    line-height: 1.5px;
+    font-size: 14px;
+    padding: 30px;
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol !important;
+}
+
+.logo {
+    border-radius: 3px;
+}
+
+.skill-link:hover {
+    transition: transform 0.3s;
+    border-color: #eaecef !important;
+    backface-visibility: hidden;
+    box-shadow: 0 0 10px #eaecef;
+}
+
+.skill-name {
+    text-align: center !important;
+    line-height: 1.25px;
+    margin-top: 50px !important;
+    margin-bottom: 0 !important;
+    color: #24292e !important;
+    font-size: 20px;
+}
+
+.text {
+    padding-top: 15px;
+    font-size: 20px;
+    color: #f1f1f1;
+    text-align: left;
+    padding-bottom: 10px;
+}
